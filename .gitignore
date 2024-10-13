@@ -3,41 +3,77 @@
 *.log
 *.pyc
 *.swp
-.DS_Store
+.DS_Store            # macOS specific
 .atom/
 .buildlog/
 .history
 .svn/
 migrate_working_dir/
 
-# IntelliJ related
+# IntelliJ / Android Studio related
 *.iml
 *.ipr
 *.iws
 .idea/
+.gradle/             # Android Gradle cache
+/local.properties    # Android-specific file (contains local paths)
 
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
+# VSCode specific (uncomment if you don't want to version control VSCode settings)
 #.vscode/
 
 # Flutter/Dart/Pub related
-**/doc/api/
+**/doc/api/                # Dartdoc generated API docs
 **/ios/Flutter/.last_build_id
-.dart_tool/
-.flutter-plugins
+.dart_tool/                # Dart/Flutter tool files
+.flutter-plugins           # Flutter plugins tracking
 .flutter-plugins-dependencies
-.pub-cache/
-.pub/
-/build/
+.pub-cache/                # Dart package cache
+.pub/                      # Pub package lock files
+/build/                    # Build output folder for all platforms
 
-# Symbolication related
+# Android-specific
+android/app/debug/
+android/app/profile/
+android/app/release/
+android/.gradle/           # Gradle cache and temporary files
+
+# iOS-specific
+ios/Pods/                  # CocoaPods dependencies
+ios/.symlinks/             # Symlinked directories (from pods)
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Flutter/App.framework.dSYM
+ios/Flutter/engine/         # Flutter engine build outputs
+
+# Linux-specific
+linux/.dart_tool/
+
+# Windows-specific
+windows/runner/Debug/
+windows/runner/Release/
+windows/runner/*.pdb        # Windows debug symbols
+
+# MacOS-specific
+macos/Flutter/ephemeral/
+macos/.dart_tool/
+
+# Web-specific
+web/.dart_tool/
+web/build/
+
+# Symbolication related (for obfuscation/symbol generation)
 app.*.symbols
-
-# Obfuscation related
 app.*.map.json
 
-# Android Studio will place build artifacts here
-/android/app/debug
-/android/app/profile
-/android/app/release
+# Package manager lock files (if applicable)
+yarn.lock
+package-lock.json
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Sensitive environment files (if applicable)
+.env                     # Environment variables (don't push secrets)
+.env.local
+.env.*.local
