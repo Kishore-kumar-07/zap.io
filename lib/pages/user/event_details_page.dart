@@ -21,14 +21,13 @@ class EventDetailsPage extends StatelessWidget {
           "Concert Details",
           style: TextStyle(color: Colors.green),
         ),
-        centerTitle: true,
         backgroundColor: Colors.black,
         elevation: 0,
       ),
       body: ListView(
         padding: const EdgeInsets.all(16.0),
         children: [
-          // Event Image Section
+        
           Container(
             height: 300,
             decoration: BoxDecoration(
@@ -48,7 +47,6 @@ class EventDetailsPage extends StatelessWidget {
           ),
           const SizedBox(height: 20),
 
-          // Event Title Section
           Text(
             "Adhi's World Tour",
             style: const TextStyle(
@@ -59,7 +57,7 @@ class EventDetailsPage extends StatelessWidget {
           ),
           const SizedBox(height: 10),
 
-          // Event Details Section
+           
           Row(
             children: [
               Icon(Icons.location_on, color: Colors.green),
@@ -89,7 +87,7 @@ class EventDetailsPage extends StatelessWidget {
           ),
           const SizedBox(height: 20),
 
-          // Artist Details Section
+  
           Container(
             padding: const EdgeInsets.all(16.0),
             decoration: BoxDecoration(
@@ -100,7 +98,7 @@ class EventDetailsPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text(
-                  "Artist Information",
+                  "Event Description",
                   style: TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.bold,
@@ -109,7 +107,7 @@ class EventDetailsPage extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
                 const Text(
-                  "Adhi is a world-renowned artist known for his blend of traditional and modern music. This world tour is set to be an unforgettable experience for all attendees, featuring live performances of his latest hits.",
+                  "Adhi of Hip Hop Tamizha is set to embark on a thrilling world tour, bringing his signature blend of Tamil folk and hip-hop to global fans. Get ready for energetic performances of chart-toppers like \"Vaadi Pulla Vaadi\" and \"Takkaru Takkaru.\"",
                   style: TextStyle(
                     color: Colors.white70,
                     fontSize: 16,
@@ -120,7 +118,9 @@ class EventDetailsPage extends StatelessWidget {
                 Row(
                   children: [
                     ElevatedButton.icon(
-                      onPressed: () {},
+                      onPressed: () {
+                         Navigator.push(context, MaterialPageRoute(builder: (context)=>BookingPage()));
+                      },
                       icon: const Icon(Icons.airplane_ticket),
                       label: const Text("Buy Tickets"),
                       style: ElevatedButton.styleFrom(
@@ -130,7 +130,7 @@ class EventDetailsPage extends StatelessWidget {
                     const SizedBox(width: 10),
                     OutlinedButton.icon(
                       onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>BookingPage()));
+                       
                       },
                       icon: const Icon(Icons.share),
                       label: const Text("Share"),

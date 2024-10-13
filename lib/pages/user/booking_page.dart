@@ -18,7 +18,7 @@ class _BookingPageState extends State<BookingPage> {
   DateTime? selectedDate;
   String selectedTimeSlot = "";
 
-  // Available time slots
+   
   final List<String> timeSlots = ["10:00 AM", "12:00 PM", "03:00 PM", "05:00 PM"];
 
   void showBookingDialog(BuildContext context, String tier, double price) {
@@ -33,7 +33,7 @@ class _BookingPageState extends State<BookingPage> {
               backgroundColor: const Color(0xFF1C1C1C),
               title: Text(
                 "Book Tickets for $tier Tier",
-                style: const TextStyle(color: Color(0xFF66FF66)),
+                style: const TextStyle(color:  Colors.green),
               ),
               content: Column(
                 mainAxisSize: MainAxisSize.min,
@@ -50,16 +50,16 @@ class _BookingPageState extends State<BookingPage> {
                       hintText: "Number of tickets",
                       hintStyle: TextStyle(color: Colors.white38),
                       enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Color(0xFF66FF66)),
+                        borderSide: BorderSide(color:  Colors.green),
                       ),
                       focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Color(0xFF66FF66)),
+                        borderSide: BorderSide(color:  Colors.green),
                       ),
                     ),
                   ),
                   const SizedBox(height: 20),
 
-                  // Date selection
+                   
                   const Text(
                     "Select Date:",
                     style: TextStyle(color: Colors.white70),
@@ -75,7 +75,7 @@ class _BookingPageState extends State<BookingPage> {
                           return Theme(
                             data: ThemeData.dark().copyWith(
                               colorScheme: ColorScheme.dark(
-                                primary: Color(0xFF66FF66),
+                                primary:  Colors.green,
                                 onPrimary: Colors.black,
                                 surface: Colors.black,
                                 onSurface: Colors.white,
@@ -95,7 +95,7 @@ class _BookingPageState extends State<BookingPage> {
                     child: Container(
                       padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
                       decoration: BoxDecoration(
-                        border: Border.all(color: const Color(0xFF66FF66)),
+                        border: Border.all(color:   Colors.green),
                         borderRadius: BorderRadius.circular(5),
                       ),
                       child: Row(
@@ -107,7 +107,7 @@ class _BookingPageState extends State<BookingPage> {
                                 : DateFormat("dd-MM-yyyy").format(selectedDate!),
                             style: const TextStyle(color: Colors.white),
                           ),
-                          const Icon(Icons.calendar_today, color: Color(0xFF66FF66)),
+                          const Icon(Icons.calendar_today, color:  Colors.green),
                         ],
                       ),
                     ),
@@ -115,7 +115,7 @@ class _BookingPageState extends State<BookingPage> {
 
                   const SizedBox(height: 20),
 
-                  // Time slot selection
+                   
                   const Text(
                     "Select Time Slot:",
                     style: TextStyle(color: Colors.white70),
@@ -157,7 +157,7 @@ class _BookingPageState extends State<BookingPage> {
                 TextButton(
                   child: const Text(
                     "Book",
-                    style: TextStyle(color: Color(0xFF66FF66)),
+                    style: TextStyle(color:  Colors.green),
                   ),
                   onPressed: () {
                     setState(() {
@@ -187,14 +187,14 @@ class _BookingPageState extends State<BookingPage> {
       appBar: AppBar(
         title: const Text(
           'Booking Page',
-          style: TextStyle(color: Color(0xFF66FF66)),
+          style: TextStyle(color: Colors.green),
         ),
         backgroundColor: const Color(0xFF101010),
       ),
       backgroundColor: const Color(0xFF101010),
       body: Column(
         children: [
-          // Main booking layout with tiers
+           
           Expanded(
             child: Center(
               child: Container(
@@ -203,7 +203,7 @@ class _BookingPageState extends State<BookingPage> {
                 child: Stack(
                   alignment: Alignment.topCenter,
                   children: [
-                    // Silver Tier Booking
+                     
                     GestureDetector(
                       onTap: () {
                         showBookingDialog(context, "Silver", 300);
@@ -214,7 +214,7 @@ class _BookingPageState extends State<BookingPage> {
                         decoration: BoxDecoration(
                           color: const Color(0xFF2B2B2B),
                           borderRadius: BorderRadius.circular(11),
-                          border: Border.all(color: const Color(0xFF66FF66), width: 2),
+                          border: Border.all(color: Colors.green, width: 2),
                         ),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.end,
@@ -224,7 +224,7 @@ class _BookingPageState extends State<BookingPage> {
                               "Silver Tier",
                               style: TextStyle(
                                 fontSize: 24,
-                                color: Color(0xFF66FF66),
+                                color:  Colors.green,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -232,7 +232,7 @@ class _BookingPageState extends State<BookingPage> {
                         ),
                       ),
                     ),
-                    // Gold Tier Booking
+                     
                     GestureDetector(
                       onTap: () {
                         showBookingDialog(context, "Gold", 500);
@@ -243,7 +243,7 @@ class _BookingPageState extends State<BookingPage> {
                         decoration: BoxDecoration(
                           color: const Color(0xFF1F1F1F),
                           borderRadius: BorderRadius.circular(11),
-                          border: Border.all(color: const Color(0xFF66FF66), width: 2),
+                          border: Border.all(color:   Colors.green, width: 2),
                         ),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.end,
@@ -261,7 +261,7 @@ class _BookingPageState extends State<BookingPage> {
                         ),
                       ),
                     ),
-                    // Platinum Tier Booking
+                     
                     GestureDetector(
                       onTap: () {
                         showBookingDialog(context, "Platinum", 1000);
@@ -276,7 +276,7 @@ class _BookingPageState extends State<BookingPage> {
                             end: Alignment.bottomCenter,
                           ),
                           borderRadius: BorderRadius.circular(11),
-                          border: Border.all(color: const Color(0xFF66FF66), width: 2),
+                          border: Border.all(color:   Colors.green, width: 2),
                         ),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.end,
@@ -286,7 +286,7 @@ class _BookingPageState extends State<BookingPage> {
                               "Platinum Tier",
                               style: TextStyle(
                                 fontSize: 20,
-                                color: Color(0xFF66FF66),
+                                color:  Colors.green,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -294,7 +294,7 @@ class _BookingPageState extends State<BookingPage> {
                         ),
                       ),
                     ),
-                    // Stage Area
+                     
                     Container(
                       height: h * .1,
                       width: w * .3,
@@ -329,7 +329,7 @@ class _BookingPageState extends State<BookingPage> {
               decoration: BoxDecoration(
                 color: Colors.grey.shade800.withOpacity(0.8),
                 borderRadius: BorderRadius.circular(11),
-                border: Border.all(color: const Color(0xFF66FF66), width: 2),
+                border: Border.all(color:   Colors.green, width: 2),
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -358,17 +358,17 @@ class _BookingPageState extends State<BookingPage> {
                         ),
                         Text(
                           "Total Amount: ₹$totalPrice",
-                          style: const TextStyle(color: Color(0xFF66FF66), fontSize: 20),
+                          style: const TextStyle(color:  Colors.green, fontSize: 20),
                         ),
                       ],
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                    padding: const EdgeInsets.only(left: 16.0,right: 16.0,bottom: 10),
                     child: SlideAction(
                       text: "Swipe to Confirm Payment",
                       textStyle: const TextStyle(color: Colors.white),
-                      outerColor: const Color(0xFF66FF66),
+                      outerColor:   Colors.green,
                       innerColor: const Color(0xFF282828),
                       onSubmit: () {
                         setState(() {
@@ -382,7 +382,7 @@ class _BookingPageState extends State<BookingPage> {
                                 "Payment of ₹$totalPrice confirmed for $selectedTier Tier!",
                                 style: const TextStyle(color: Colors.white),
                               ),
-                              backgroundColor: const Color(0xFF66FF66),
+                              backgroundColor:   Colors.green,
                             ),
                           ),
                         );

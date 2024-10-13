@@ -43,7 +43,7 @@ class _UserHomeState extends State<UserHome> {
               title: Text('Explore', style: TextStyle(color: Colors.green)),
             ),
             FlashyTabBarItem(
-              icon: Icon(Icons.highlight, color: Colors.white, size: 30),
+              icon: Icon(Icons.account_circle, color: Colors.white, size: 30),
               title: Text('User', style: TextStyle(color: Colors.green)),
             ),
           ],
@@ -72,7 +72,7 @@ class _UserHomeState extends State<UserHome> {
               height: 280,
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
-                itemCount: 5, // Number of TopEventsComponent instances
+                itemCount: 5,  
                 itemBuilder: (context, index) {
                   return GestureDetector(
                       onTap: () {
@@ -98,7 +98,7 @@ class _UserHomeState extends State<UserHome> {
               height: 200,
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
-                itemCount: 5, // Number of RecommendationComponent instances
+                itemCount: 5,  
                 itemBuilder: (context, index) {
                   return RecommendationComponent(
                     idx: index + 15,
@@ -118,9 +118,9 @@ class _UserHomeState extends State<UserHome> {
               ),
             ),
             ListView.builder(
-              shrinkWrap: true, // Ensure ListView is within available space
-              physics: NeverScrollableScrollPhysics(), // Disable scrolling
-              itemCount: 4, // Number of EventListComponent instances
+              shrinkWrap: true,  
+              physics: NeverScrollableScrollPhysics(),  
+              itemCount: 4,  
               itemBuilder: (context, index) {
                 return EventListComponent(idx: index+45,);
               },

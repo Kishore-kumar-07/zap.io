@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:glowy_borders/glowy_borders.dart';
 
-class LoginButton extends StatelessWidget {
-  const LoginButton({super.key, required this.text, required this.onTap});
+class AnimatedButton extends StatelessWidget {
+  const AnimatedButton({super.key, required this.text, required this.onTap});
   final String text;
   final Function() onTap;
 
@@ -10,9 +10,8 @@ class LoginButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return  AnimatedGradientBorder(
       gradientColors: [
-        Colors.purple.shade100,
-        Colors.blue.shade100,
-        Colors.red.shade100,
+        Colors.black,
+        Colors.green
       ],
       borderSize: 2,
       glowSize: 5,
