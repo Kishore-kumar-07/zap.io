@@ -1,21 +1,25 @@
+import 'package:event_management/pages/login_signin_page.dart';
+import 'package:event_management/pages/user/user_home.dart';
+import 'package:event_management/theme/theme_constants.dart';
 import 'package:flutter/material.dart';
-import 'package:login/pages/admin.dart';
-import 'package:login/pages/user.dart';
+
+import 'components/login_button.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(Home());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class Home extends StatelessWidget {
+  const Home({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      theme: lightTheme,
       debugShowCheckedModeBanner: false,
-      home: User()
+      home: Scaffold(
+        body: LogInSignInPage(),
+      ),
     );
   }
 }
